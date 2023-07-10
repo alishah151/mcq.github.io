@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script type="text/javascript">
+      var stepper = undefined;
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log(44)
+  stepper = new Stepper(document.querySelector('.bs-stepper'), {animation: true})
+  console.log(stepper)
+})
+
+function next() {
+    console.log("next")
+stepper.next()
+  }
+  function previous() {
+    console.log("previous")
+stepper.previous()
+  }
+
+  
+    </script>
+  <body>
+    <div class="bs-stepper">
+      <div class="bs-stepper-header" role="tablist">
+        <!-- your steps here -->
+        <div class="step" data-target="#logins-part">
+          <button
+            type="button"
+            class="step-trigger"
+            role="tab"
+            aria-controls="logins-part"
+            id="logins-part-trigger"
+          >
+            <span class="bs-stepper-circle">1</span>
+            <span class="bs-stepper-label">Logins</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#information-part">
+          <button
+            type="button"
+            class="step-trigger"
+            role="tab"
+            aria-controls="information-part"
+            id="information-part-trigger"
+          >
+            <span class="bs-stepper-circle">2</span>
+            <span class="bs-stepper-label">Various information</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#information-part2">
+          <button
+            type="button"
+            class="step-trigger"
+            role="tab"
+            aria-controls="information-part2"
+            id="information-part-trigger2"
+          >
+            <span class="bs-stepper-circle">3</span>
+            <span class="bs-stepper-label">Third information</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#information-part3">
+          <button
+            type="button"
+            class="step-trigger"
+            role="tab"
+            aria-controls="information-part3"
+            id="information-part-trigger3"
+          >
+            <span class="bs-stepper-circle">4</span>
+            <span class="bs-stepper-label">Forth information</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#information-part4">
+          <button
+            type="button"
+            class="step-trigger"
+            role="tab"
+            aria-controls="information-part4"
+            id="information-part-trigger4"
+          >
+            <span class="bs-stepper-circle">5</span>
+            <span class="bs-stepper-label">fifth information</span>
+          </button>
+        </div>
+      </div>
+      <div class="bs-stepper-content">
+        <!-- your steps content here -->
+        <div
+          id="logins-part"
+          class="content"
+          role="tabpanel"
+          aria-labelledby="logins-part-trigger"
+        >
+        <label for="cars">Choose a car0:</label>
+
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select></div>
+        <div
+          id="information-part"
+          class="content"
+          role="tabpanel"
+          aria-labelledby="information-part-trigger"
+        ><label for="cars">Choose a car1:</label>
+
+        <select name="cars" id="cars2">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select></div>
+        <div
+          id="information-part2"
+          class="content"
+          role="tabpanel"
+          aria-labelledby="information-part-trigger2"
+        ><label for="cars">Choose a car222:</label>
+
+        <select name="cars" id="cars3">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select></div>
+        <div
+          id="information-part3"
+          class="content"
+          role="tabpanel"
+          aria-labelledby="information-part-trigger3"
+        ><label for="cars">Choose a car3333333:</label>
+
+        <select name="cars" id="cars4">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select></div>
+        <div
+          id="information-part4"
+          class="content"
+          role="tabpanel"
+          aria-labelledby="information-part-trigger4"
+        ><label for="cars">Choose a car444444:</label>
+
+        <select name="cars" id="cars5">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select></div>
+      </div>
+
+      <div>
+        <button id ="button1" onclick="next()">Next</button>
+        <button id ="button2" onclick="previous()">previous</button>
+      </div>
+    </div>
+  </body>
+</html>
